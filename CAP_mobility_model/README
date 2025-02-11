@@ -1,0 +1,24 @@
+S. Devaraju, A. Ihler and S. Kumar, "A Connectivity-Aware Pheromone Mobility Model for Autonomous UAV Networks," 2023 IEEE 20th Consumer Communications & Networking Conference (CCNC), Las Vegas, NV, USA, 2023, pp. 1-6, doi: 10.1109/CCNC51644.2023.10060165. keywords: {Mobility models;Surveillance;Spread spectrum communication;Network architecture;Airborne network;UAV network;search and rescue;network connectivity;pheromone model},
+
+
+To run Connectivity-Aware Pheromone Mobility Model (CAP) simulation, 
+	python3 main_connect.py {Number of UAVs} {UAV speed m/s} {Tx range} {Map size} {beta for tuning parameter}
+
+Input argument settings:
+	Number of UAVs = 50 , 100
+	UAV speed = 20 , 50 (m/s) 
+	Tx range = 1200 (m)
+	Map size = 8000 (m)    (for 8km x 8km map area)
+	beta (β) = 0.5, 2, 3, 4;     
+	(β=0.5 gives low network connectivity, fast coverage performance, while β=4 gives high network connectivity, slower coverage performance)
+
+Other parameters can be set in main_connect.py such as,
+	simTime = 2005 # seconds 
+	position_log_interval  = 205 # seconds; 
+	(starts to log positions at (simTime - position_log_interval); Hence we log the last position_log_interval seconds of node positions save in nodeTrajectories folder)
+	
+	
+Outputs:
+Node Trajectories are saved in ./nodeTrajectories/
+Connectivity (NCC,ANC) and Coverage (Coverage time, Fairness) performance metrics stored in ./CAP_results_20runs/
+
