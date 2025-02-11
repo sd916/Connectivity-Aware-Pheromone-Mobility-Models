@@ -19,6 +19,12 @@ Other parameters can be set in main_connect.py such as,
 	
 	
 Outputs:
-Node Trajectories are saved in ./nodeTrajectories/
-Connectivity (NCC,ANC) and Coverage (Coverage time, Fairness) performance metrics stored in ./CAP_results_20runs/
+	Connectivity (NCC,ANC) and Coverage (Coverage time, Fairness) performance metrics stored in ./CAP_results_20runs/
+	Node Trajectories are saved in ./nodeTrajectories/
+	(Format: In Run 0 using CAP mobility for Node 0 is saved as '0CAP_Node0.txt' -> At time t, UAV Postion_X, UAV Postion_y, UAV Next-waypoint_X, UAV Next-waypoint_Y
+	Ex:     line 0: 4.89545,3.21846,4.95000,3.15000
+		line 1: 4.90792,3.20282,4.95000,3.15000
+		line 2:	4.92038,3.18718,5.15000,3.05000
+		...
+		...
 
