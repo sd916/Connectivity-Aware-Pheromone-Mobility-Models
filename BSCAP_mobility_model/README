@@ -1,0 +1,25 @@
+S. Devaraju, A. Ihler and S. Kumar, "A Deep-Q-Learning-Based Base-Station-Connectivity-Aware Decentralized Pheromone Mobility Model for Autonomous UAV Networks," in IEEE Transactions on Aerospace and Electronic Systems, vol. 60, no. 6, pp. 8682-8699, Dec. 2024, doi: 10.1109/TAES.2024.3434779.
+keywords: {Autonomous aerial vehicles;Mobility models;Relays;Real-time systems;Aerospace and electronic systems;Trajectory;Q-learning;Area coverage;deep Q-learning;network connectivity;node degree;reinforcement learning (RL);unmanned aerial vehicles (UAVs);unmanned aerial vehicle mobility model;unmanned aerial vehicle networks;unmanned aerial vehicle swarm},
+
+
+To run Base-Station-Connectivity-Aware Pheromone Mobility Model (BS-CAP) simulation (Heuristic Model only), 
+	python3 main_connect.py {Number of UAVs} {UAV speed m/s} {Tx range} {Map size} {beta for tuning parameter}
+
+Input argument settings:
+	Number of UAVs = 50 , 100
+	UAV speed = 20 , 50 (m/s) 
+	Tx range = 1200 (m)
+	Map size = 8000 (m)    (for 8km x 8km map area)
+	beta = 1.5  (β ∈ {0.5, 1.5, 2.5})     
+	(1.5 - mid connectiviy and coverage performance; 0.5 - low neighbor connectivity, high coverage; 2.5 - high neighbor connectivity, low coverage; Additional 		UAVs always try to abide by base station connectivity constraint)
+
+Other parameters can be set in main_connect.py such as,
+    	simTime = 2005 # seconds 
+	position_log_interval  = 205 # seconds; 
+	(starts to log positions at (simTime - position_log_interval); Hence we log the last position_log_interval seconds of node positions save in nodeTrajectories folder)
+
+	
+Outputs:
+Node Trajectories are saved in ./nodeTrajectories/BSCAP/
+Connectivity (NCC,ANC, BS_connectivity) and Coverage (Coverage time, Fairness) performance metrics stored in ./BSCAP_results_20runs/
+
