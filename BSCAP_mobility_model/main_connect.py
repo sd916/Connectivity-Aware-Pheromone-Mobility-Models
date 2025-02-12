@@ -195,7 +195,7 @@ def save_NodeTrajectories(file_path, MOBILILTY_MODEL_TYPE, runNo, nAgents, log_p
 
 def print_stats(rstats, f = sys.stdout):
     with np.printoptions(threshold=np.inf):
-        print("coverage", rstats.coverage, file=f)
+        # print("coverage", rstats.coverage, file=f)
         print( "nnc= ",np.mean(rstats.no_connected_comp), "anc= ",np.mean(rstats.avg_deg_conn),\
             "gaint= ",np.mean(rstats.largest_subgraph), "'%' is_biconnected_gaint",  rstats.biconnected_gaint, file=f)
         print("jainsindex= ",np.mean(rstats.jain_index)) #, "  recent coverage= ",rstats.cellscoverage_per_100s, file=f)
