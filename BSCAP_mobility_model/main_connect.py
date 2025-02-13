@@ -105,7 +105,7 @@ def main():
         res = swarm.stats
 
         #save BSCAP node trajectories
-        save_NodeTrajectories(TRAJECTORY_FOLDER, MOBILILTY_MODEL_TYPE, ith_episode, nAgents, res.UAV_positions, res.UAV_nextwaypoints, simTime-position_log_interval, simTime ) #SD*: saving node trajectories for 200s
+        save_NodeTrajectories(TRAJECTORY_FOLDER, MOBILILTY_MODEL_TYPE, ith_episode, nAgents, nBaseStations, res.UAV_positions, res.UAV_nextwaypoints, simTime-position_log_interval, simTime ) #SD*: saving node trajectories for 200s
         
         #Update stats and result for the episode
         rstats.coverage = np.append(rstats.coverage, [res.coverage],axis=0)
@@ -179,10 +179,10 @@ def set_random_seed(random_seed):
     random.seed(random_seed)
     np.random.seed(random_seed)  # In case NumPy is used in computations
 
-def save_NodeTrajectories(file_path, MOBILILTY_MODEL_TYPE, runNo, nAgents, log_positions, log_nextwaypoints, log_startTime, log_endTime, ):
+def save_NodeTrajectories(file_path, MOBILILTY_MODEL_TYPE, runNo, nAgents,nBaseStations, log_positions, log_nextwaypoints, log_startTime, log_endTime, ):
     os.makedirs(file_path, exist_ok=True)
 
-    for node in range(nAgents):
+    for node in range(nAgents+nBaseStations):
         A = log_positions.transpose(1, 0, 2)  # Swap (t, n, x) → (n, t, x)
         B = log_nextwaypoints.transpose(1, 0, 2)  # Swap (t, n, x) → (n, t, x)
         NODE_LOCATIONS_WAYPOINTS = np.concatenate((A[node], B[node]), axis=1)
