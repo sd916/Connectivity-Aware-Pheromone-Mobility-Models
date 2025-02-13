@@ -6,7 +6,7 @@ To run Base-Station-Connectivity-Aware Pheromone Mobility Model (BS-CAP) simulat
 	python3 main_connect.py {Number of UAVs} {UAV speed m/s} {Tx range} {Map size} {beta for tuning parameter}
 
 Input argument settings:
-	Number of UAVs = 50 , 100 (+ 1 BS)
+	Number of UAVs = 50 , 100
 	UAV speed = 20 , 50 (m/s) 
 	Tx range = 1200 (m)
 	Map size = 8000 (m)    (for 8km x 8km map area)
@@ -14,9 +14,10 @@ Input argument settings:
 	(1.5 - mid connectivity and coverage performance; 0.5 - low neighbor connectivity, high coverage; 2.5 - high neighbor connectivity, low coverage; Additional 		UAVs always try to abide by base station connectivity constraint)
 
 Other parameters can be set in main_connect.py, such as,
+	nBaseStations = 1 # Single base station node at the mid-bottom of the map.
     	simTime = 2005 # seconds 
 	position_log_interval  = 205 # seconds; 
-	(starts to log positions at (simTime - position_log_interval); Hence we log the last position_log_interval seconds of node positions save in nodeTrajectories folder)
+	(starts to log positions at (simTime - position_log_interval); Hence, we log the last position_log_interval seconds of node positions saved in nodeTrajectories folder)
 
 	
 Outputs:
@@ -30,3 +31,5 @@ Outputs:
 			...
 		Node Trajectories for 50,100 UAVs at 20,40 m/s, using Tx range = 1200m, Map size = 8000m x 8000m and beta = 1.5 can be found in 
 		https://drive.google.com/drive/folders/1Mhbrv9F-fnc5M1rKkmyp3gzQdF2uIpZy?usp=sharing )
+
+Note: If the 'Number of UAVs' used in the simulation is set to 50, then there will be node trajectories (of nodes named Node0 to Node50) saved; ( 50 UAVs + 1 BS node).
