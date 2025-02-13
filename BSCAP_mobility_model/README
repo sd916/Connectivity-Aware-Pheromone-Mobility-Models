@@ -6,7 +6,7 @@ To run Base-Station-Connectivity-Aware Pheromone Mobility Model (BS-CAP) simulat
 	python3 main_connect.py {Number of UAVs} {UAV speed m/s} {Tx range} {Map size} {beta for tuning parameter}
 
 Input argument settings:
-	Number of UAVs = 50 , 100
+	Number of UAVs = 50 , 100 (+ 1 BS)
 	UAV speed = 20 , 50 (m/s) 
 	Tx range = 1200 (m)
 	Map size = 8000 (m)    (for 8km x 8km map area)
