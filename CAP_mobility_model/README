@@ -13,6 +13,7 @@ Input argument settings:
 	(β=0.5 gives low network connectivity, fast coverage performance, while β=4 gives high network connectivity, slower coverage performance)
 
 Other parameters can be set in main_connect.py such as,
+	num_episodes = 20 # no. of runs for averaging
 	simTime = 2005 # seconds (Simulation end time) 
 	position_log_interval  = 205 # seconds; 
 	(starts to log positions at 'simTime - position_log_interval' second; Hence we save the last 'position_log_interval' seconds of node positions save in nodeTrajectories folder)
