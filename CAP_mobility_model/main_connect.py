@@ -45,7 +45,7 @@ running_as = ''
 # -------------------------------------------------------------------------------------------------------------------------------------------
 def main():
     globals.init() # iniitializing global defined in globals.py 
-    num_episodes = 20 # no. of runs for averaging - 30 runs
+    num_episodes = 20 # no. of runs for averaging
     nAgents = int(sys.argv[1]); # no. of UAVs; 50, 100
     uav_speed = int(sys.argv[2]) # 20 m/s or 50 m/s
     transmission_range = int(sys.argv[3]) # 1200 m
