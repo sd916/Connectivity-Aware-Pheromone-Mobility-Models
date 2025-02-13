@@ -14,6 +14,7 @@ Input argument settings:
 	(1.5 - mid connectivity and coverage performance; 0.5 - low neighbor connectivity, high coverage; 2.5 - high neighbor connectivity, low coverage; Additional 		UAVs always try to abide by base station connectivity constraint)
 
 Other parameters can be set in main_connect.py, such as,
+	num_episodes = 20 # no. of runs for averaging
 	nBaseStations = 1 # Single base station node at the mid-bottom of the map.
     	simTime = 2005 # seconds 
 	position_log_interval  = 205 # seconds; 
