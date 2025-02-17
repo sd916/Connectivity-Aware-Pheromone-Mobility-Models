@@ -28,6 +28,6 @@ Outputs:
 		line 2:	4.92038,3.18718,5.15000,3.05000
 		...
 		...
-	Node Trajectories for 50,100 UAVs at 20,40 m/s, using Tx range = 1200m, Map size = 8000m x 8000m and beta = 3.0 can be found in 
+	Node Trajectories for 50,100 UAVs at 20, 50 m/s, using Tx range = 1200m, Map size = 8000m x 8000m and beta = 3.0 can be found in 
 	https://drive.google.com/drive/folders/1jEvFChTxquZ2NopLudlYFytUbNPlc09z?usp=sharing )
 
